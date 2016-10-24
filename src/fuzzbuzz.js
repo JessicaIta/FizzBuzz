@@ -3,7 +3,10 @@ function FizzBuzz(numbers) {
   for(var i = 0; i < numbers.length; i++) {
     if (numbers[i]%3 === 0){
       result.push("Fizz");
-    }else{
+    }else if(numbers[i]%5 === 0){
+      result.push("Buzz");
+    }
+    else{
       result.push(numbers[i]);
     }
   }
