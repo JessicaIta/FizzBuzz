@@ -14,4 +14,12 @@ describe('FizzBuzz', function() {
   it ('should return ["Buzz"] when call #FizzBuzz([5])', function(){
       assert.deepEqual(f.FizzBuzz([5]), ["Buzz"], "should return Buzz because the number is divisible by 5");
   });
+
+  it('should return ["FizzBuzz"] when call #FizzBuzz([15])', function(){
+     assert.deepEqual(f.FizzBuzz([1500]), ["FizzBuzz"],"should return FizzBuzz because the number is divisible by both 3 and 5")
+  });
+
+    it('should return [1,"Fizz","Buzz", 7, "FizzBuzz"] when call #FizzBuzz([1, 6, 10, 7, 30])', function(){
+       assert.deepEqual(f.FizzBuzz([1, 6, 10, 7, 30]), [1,"Fizz","Buzz", 7, "FizzBuzz"], "should return an array of mixed values")
+    });
 });
