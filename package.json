@@ -21,6 +21,7 @@
   "author": "Raphael Pantaleão & Jéssica Costa",
   "license": "MIT",
   "devDependencies": {
-    "mocha": "^3.1.2"
+    "mocha": "^3.1.2",
+    "underscore": "^1.8.3"
   }
 }

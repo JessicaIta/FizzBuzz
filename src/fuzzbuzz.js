@@ -1,3 +1,5 @@
+var _ = require('underscore');
+
 function FizzBuzz(numbers) {
 
   var toFizzBuzz = function (number) {
@@ -17,11 +19,7 @@ function FizzBuzz(numbers) {
     return number;
   };
 
-  var result = [];
-  for (var i = 0; i < numbers.length; i++) {
-    result.push(toFizzBuzz(numbers[i]));
-  }
-  return result;
+  return _.map(numbers, toFizzBuzz);
 }
 
 exports.FizzBuzz = FizzBuzz;
