@@ -1,20 +1,25 @@
+var _ = require('underscore');
+
 function FizzBuzz(numbers) {
-  var result = [];
-  for(var i = 0; i < numbers.length; i++) {
-    if (numbers[i]%15 === 0){
-      result.push("FizzBuzz");
+
+  var toFizzBuzz = function (number) {
+    
+    if (number % 15 === 0) {
+      return 'FizzBuzz';
     }
-    else if (numbers[i]%3 === 0){
-      result.push("Fizz");
+    
+    if (number % 3 === 0) {
+      return 'Fizz';
     }
-    else if(numbers[i]%5 === 0){
-      result.push("Buzz");
+    
+    if (number % 5 === 0) {
+      return 'Buzz';
     }
-    else{
-      result.push(numbers[i]);
-    }
-  }
-  return result;
+    
+    return number;
+  };
+
+  return _.map(numbers, toFizzBuzz);
 }
 
 exports.FizzBuzz = FizzBuzz;
