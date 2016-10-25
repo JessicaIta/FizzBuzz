@@ -1,18 +1,25 @@
 function FizzBuzz(numbers) {
+
+  var toFizzBuzz = function (number) {
+    
+    if (number % 15 === 0) {
+      return 'FizzBuzz';
+    }
+    
+    if (number % 3 === 0) {
+      return 'Fizz';
+    }
+    
+    if (number % 5 === 0) {
+      return 'Buzz';
+    }
+    
+    return number;
+  };
+
   var result = [];
-  for(var i = 0; i < numbers.length; i++) {
-    if (numbers[i]%15 === 0){
-      result.push("FizzBuzz");
-    }
-    else if (numbers[i]%3 === 0){
-      result.push("Fizz");
-    }
-    else if(numbers[i]%5 === 0){
-      result.push("Buzz");
-    }
-    else{
-      result.push(numbers[i]);
-    }
+  for (var i = 0; i < numbers.length; i++) {
+    result.push(toFizzBuzz(numbers[i]));
   }
   return result;
 }
